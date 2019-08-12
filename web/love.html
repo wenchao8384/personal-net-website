@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="Keywords" content="关键字,关键词">
+   <meta name="Description" content="描述和简介">
+   <script type="text/javascript" src="./jquery-3.4.1.min.js" ></script>
+   <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+   <title>Title</title>
+   <style type="text/css">
+       *{margin:0;padding:0;}
+       body,ul,li,ol,dl,dd,p,h1,h2,h3,h4,h5,h6{ margin:0;}
+       a{text-decoration:none;color: inherit;}
+       img{display: block;border:none;}
+       ol,ul{list-style:none;}
+       .clearfix:after {content: "";display: block;clear: both;}
+       .fl{ float: left;}
+       .fr{ float: right;}
+ 
+       html{
+           height: 100%;
+           background: -webkit-radial-gradient(center,#153170,#000);
+       }
+ 
+       .heart{ position: relative; width: 300px; height: 300px;transform: rotate(45deg);
+           animation: move 2s infinite alternate ;}
+       .heart div{ position: absolute; width: 200px; height: 200px; background: red;}
+       .heart .middle{ right: 0; bottom: 0; width: 200px; height: 200px;}
+       .heart .left{ left: 0; bottom: 0; border-radius: 50%;}
+       .heart .right{ top: 0; right: 0;border-radius: 50%;}
+ 
+       .heart p{ width: 200px; height: 30px; font: bold 25px/30px "";text-align:center; color: #fff;}
+       .heart p{ position: absolute; right: 0; bottom: 85px; transform: rotate(-45deg);}
+       #img1{animation: change 2s infinite alternate }
+       #test1{
+           width: 200px;
+       }
+       #test1 img{
+           width: 400px;
+       }
+       .layui-carousel>[carousel-item]>*{
+           background: transparent;
+       }
+       .layui-carousel{
+           background: transparent;
+       }
+       .a1{
+           opacity: 0;      /*实先规定文字的状态是不显示的*/
+           animation: fade-in 4s ease 0s 1;    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+       }
+       @-webkit-keyframes move{
+           10%{ transform: rotate(45deg) scale(1.1); text-shadow: 0 0 5px #fff; }
+           20%{ transform: rotate(45deg) scale(1.2); text-shadow: 0 0 5px #fff; }
+           30%{ transform: rotate(45deg) scale(1.3); text-shadow: 0 0 5px #fff; }
+           40%{ transform: rotate(45deg) scale(1.2); text-shadow: 0 0 5px #fff; }
+           50%{ transform: rotate(45deg) scale(1.3); text-shadow: 0 0 5px #fff; }
+           60%{ transform: rotate(45deg) scale(1.2); text-shadow: 0 0 5px #fff; }
+           70%{ transform: rotate(45deg) scale(1.3); text-shadow: 0 0 5px #fff; }
+           80%{ transform: rotate(45deg) scale(1.2); text-shadow: 0 0 10px #fff;}
+           90%{ transform: rotate(45deg) scale(1.1); text-shadow: 0 0 5px #fff; }
+       }
+       @-webkit-keyframes change{
+           10%{transform: scale(1.1)}
+           20%{transform: scale(1.2)}
+           30%{transform: scale(1.3)}
+           40%{transform: scale(1.2)}
+           50%{transform: scale(1.3)}
+           60%{transform: scale(1.2)}
+           70%{transform: scale(1.3) }
+           80%{transform: scale(1.2) }
+           90%{transform: scale(1.1) }
+       }
+       @keyframes fade-in{
+           0%{ opacity: 0;}
+           100%{opacity:1;}
+       }
+       @-webkit-keyframes fade-in{
+           0%{ opacity: 0;}
+           100%{opacity:1;}
+       }
+       @-ms-keyframes fade-in{
+           0%{ opacity: 0;}
+           100%{opacity:1;}
+       }
+       @-o-keyframes fade-in{
+           0%{ opacity: 0;}
+           100%{opacity:1;}
+       }
+       @-moz-keyframes fade-in{
+           0%{ opacity: 0;}
+           100%{opacity:1;}
+       }
+       .a1{
+           opacity: 0;      /*实先规定文字的状态是不显示的*/
+           animation: fade-in 4s ease 0s 1;    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+           -webkit-animation: fade-in 4s ease 0s 1;
+           -moz-animation: fade-in 4s ease 0s 1;
+           -o-animation: fade-in 4s ease 0s 1;
+           -ms-animation: fade-in 4s ease 0s 1;
+
+           /*规定动画的最后状态为结束状态*/
+           animation-fill-mode:forwards;
+           -webkit-animation-fill-mode: forwards;
+           -o-animation-fill-mode: forwards;
+           -ms-animation-fill-mode: forwards;
+           -moz-animation-fill-mode: forwards;
+       }
+       .a2{
+           opacity: 0;
+           animation: fade-in 4s ease 2s 1;
+           -webkit-animation: fade-in 4s ease 2s 1;
+           -moz-animation: fade-in 4s ease 2s 1;
+           -o-animation: fade-in 4s ease 2s 1;
+           -ms-animation: fade-in 4s ease 2s 1;
+
+           /*规定动画的最后状态为结束状态*/
+           animation-fill-mode:forwards;
+           -webkit-animation-fill-mode: forwards;
+           -o-animation-fill-mode: forwards;
+           -ms-animation-fill-mode: forwards;
+           -moz-animation-fill-mode: forwards;
+       }
+       .a3{
+           opacity: 0;
+           animation: fade-in 4s ease 4s 1;
+           -webkit-animation: fade-in 4s ease 4s 1;
+           -moz-animation: fade-in 4s ease 4s 1;
+           -o-animation: fade-in 4s ease 4s 1;
+           -ms-animation: fade-in 4s ease 4s 1;
+
+           /*规定动画的最后状态为结束状态*/
+           animation-fill-mode:forwards;
+           -webkit-animation-fill-mode: forwards;
+           -o-animation-fill-mode: forwards;
+           -ms-animation-fill-mode: forwards;
+           -moz-animation-fill-mode: forwards;
+       }
+       .a4{
+           opacity: 0;
+           animation: fade-in 4s ease 6s 1;
+           -webkit-animation: fade-in 4s ease 6s 1;
+           -moz-animation: fade-in 4s ease 6s 1;
+           -o-animation: fade-in 4s ease 6s 1;
+           -ms-animation: fade-in 4s ease 6s 1;
+
+           /*规定动画的最后状态为结束状态*/
+           animation-fill-mode:forwards;
+           -webkit-animation-fill-mode: forwards;
+           -o-animation-fill-mode: forwards;
+           -ms-animation-fill-mode: forwards;
+           -moz-animation-fill-mode: forwards;
+       }
+       .a5{
+           opacity: 0;
+           animation: fade-in 4s ease 8s 1;
+           -webkit-animation: fade-in 4s ease 8s 1;
+           -moz-animation: fade-in 4s ease 8s 1;
+           -o-animation: fade-in 4s ease 8s 1;
+           -ms-animation: fade-in 4s ease 8s 1;
+
+           /*规定动画的最后状态为结束状态*/
+           animation-fill-mode:forwards;
+           -webkit-animation-fill-mode: forwards;
+           -o-animation-fill-mode: forwards;
+           -ms-animation-fill-mode: forwards;
+           -moz-animation-fill-mode: forwards;
+       }
+
+ </style>
+</head>
+<body>
+    <div style="position: relative;width: 900px;margin: 0 auto">
+        <div class="heart">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+            <p>Love You Forever</p>
+        </div>
+        <div  style="position: absolute;top: 85px;left: 75px;">
+            <img id="img1" style="width: 150px;" src="./images/1.jpg" alt="">
+        </div>
+        <div style="position: absolute;top: 450px;left: 75px;color: white;font-size: 20px;line-height: 30px">
+            <p class="a1">遇到可爱的人 ,</p>
+            <p class="a2">生活一下子不艰难了 ,</p>
+            <p class="a3">街道也好 ,</p>
+            <p class="a4">晚风也罢 ,</p>
+            <p class="a5">都很甜 ~</p>
+        </div>
+        <div style="position: absolute;top: 85px;right:0 ">
+            <div class="layui-carousel" id="test1">
+                <div carousel-item>
+                    <div><img src="./images/2.jpg" alt=""></div>
+                    <div><img src="./images/3.jpg" alt=""></div>
+                    <div><img src="./images/4.jpg" alt=""></div>
+                    <div><img src="./images/5.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+   <div class="video_exist play_yinfu" id="audio_btn" style="display: block;z-index:999999;">
+    <div id="yinfu" class="rotate"></div>
+    <audio id="media" src="music.mp3" autoplay preload loop="loop"></audio>
+   </div>
+
+</body>
+<script src="./layui/layui.all.js"></script>
+<script type="text/javascript">
+function audioAutoPlay(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay('media');
+
+    $(function() {
+        var audio = $('#media');
+        audio[0].play();
+        $("#audio_btn").bind('click', function() {
+            $(this).hasClass("off") ? ($(this).addClass("play_yinfu").removeClass("off"), $("#yinfu").addClass("rotate"), $("#media")[0].play()) : ($(this).addClass("off").removeClass("play_yinfu"), $("#yinfu").removeClass("rotate"),
+$("#media")[0].pause());
+        });
+
+    });
+
+layui.use('carousel', function(){
+    var carousel = layui.carousel;
+    //建造实例
+    carousel.render({
+        elem: '#test1'
+        ,width: '400px' //设置容器宽度
+        ,height: '600px'
+        ,arrow: 'hover' //始终显示箭头
+        //,anim: 'updown' //切换动画方式
+        ,indicator:'none'
+    });
+});
+</script>
+</html>
