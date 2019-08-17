@@ -1,0 +1,260 @@
+2019-08-17 21:44:02 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 15324 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 21:44:02 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 21:44:02 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e25951c: startup date [Sat Aug 17 21:44:02 CST 2019]; root of context hierarchy
+2019-08-17 21:44:02 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 21:44:03 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 21:44:03 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 21:53:00 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 7240 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 21:53:00 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 21:53:00 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 21:53:00 CST 2019]; root of context hierarchy
+2019-08-17 21:53:01 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 21:53:01 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 21:53:01 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:12)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 21:54:26 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 896 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 21:54:26 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 21:54:26 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 21:54:26 CST 2019]; root of context hierarchy
+2019-08-17 21:54:27 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 21:54:27 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 21:54:27 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:00:19 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 2828 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:00:19 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:00:19 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 22:00:19 CST 2019]; root of context hierarchy
+2019-08-17 22:00:20 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 22:00:20 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:00:20 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:00:44 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 16732 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:00:44 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:00:44 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 22:00:44 CST 2019]; root of context hierarchy
+2019-08-17 22:00:44 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 22:00:45 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:00:45 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:01:01 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 12828 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:01:01 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:01:01 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 22:01:01 CST 2019]; root of context hierarchy
+2019-08-17 22:01:01 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 22:01:01 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:01:01 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:01:36 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 1272 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:01:36 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:01:36 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 22:01:36 CST 2019]; root of context hierarchy
+2019-08-17 22:01:37 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 22:01:37 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:01:37 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:05:55 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 12456 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:05:55 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:05:55 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cfdd820: startup date [Sat Aug 17 22:05:55 CST 2019]; root of context hierarchy
+2019-08-17 22:05:55 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2019-08-17 22:05:55 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:05:55 下午 [Thread: main][ Class:org.springframework.boot.SpringApplication >> Method: org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:771) ]
+ERROR:Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mywebsite.App.main(App.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 more
+2019-08-17 22:21:42 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) ]
+INFO:Starting App on DESKTOP-IOARJ1T with PID 17076 (D:\javadevelopment\workspace\interface-test\target\classes started by 79896 in D:\javadevelopment\workspace\interface-test)
+2019-08-17 22:21:42 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) ]
+INFO:No active profile set, falling back to default profiles: default
+2019-08-17 22:21:42 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) ]
+INFO:Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@333d4a8c: startup date [Sat Aug 17 22:21:42 CST 2019]; root of context hierarchy
+2019-08-17 22:21:43 下午 [Thread: background-preinit][ Class:org.hibernate.validator.internal.util.Version >> Method: org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) ]
+INFO:HV000001: Hibernate Validator 5.3.6.Final
+2019-08-17 22:21:45 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer >> Method: org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:92) ]
+INFO:Tomcat initialized with port(s): 8080 (http)
+2019-08-17 22:21:45 下午 [Thread: localhost-startStop-1][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) ]
+INFO:Root WebApplicationContext: initialization completed in 3072 ms
+2019-08-17 22:21:46 下午 [Thread: localhost-startStop-1][ Class:org.springframework.boot.web.servlet.ServletRegistrationBean >> Method: org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:191) ]
+INFO:Mapping servlet: 'dispatcherServlet' to [/]
+2019-08-17 22:21:46 下午 [Thread: localhost-startStop-1][ Class:org.springframework.boot.web.servlet.FilterRegistrationBean >> Method: org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:259) ]
+INFO:Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-17 22:21:46 下午 [Thread: localhost-startStop-1][ Class:org.springframework.boot.web.servlet.FilterRegistrationBean >> Method: org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:259) ]
+INFO:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-17 22:21:46 下午 [Thread: localhost-startStop-1][ Class:org.springframework.boot.web.servlet.FilterRegistrationBean >> Method: org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:259) ]
+INFO:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-17 22:21:46 下午 [Thread: localhost-startStop-1][ Class:org.springframework.boot.web.servlet.FilterRegistrationBean >> Method: org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:259) ]
+INFO:Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter >> Method: org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) ]
+INFO:Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@333d4a8c: startup date [Sat Aug 17 22:21:42 CST 2019]; root of context hierarchy
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping >> Method: org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) ]
+INFO:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping >> Method: org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) ]
+INFO:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping >> Method: org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) ]
+INFO:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping >> Method: org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) ]
+INFO:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-17 22:21:47 下午 [Thread: main][ Class:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping >> Method: org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) ]
+INFO:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-17 22:21:48 下午 [Thread: main][ Class:org.springframework.jmx.export.annotation.AnnotationMBeanExporter >> Method: org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) ]
+INFO:Registering beans for JMX exposure on startup
+2019-08-17 22:21:48 下午 [Thread: main][ Class:org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer >> Method: org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:216) ]
+INFO:Tomcat started on port(s): 8080 (http)
+2019-08-17 22:21:48 下午 [Thread: main][ Class:com.mywebsite.App >> Method: org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) ]
+INFO:Started App in 6.281 seconds (JVM running for 8.104)
+2019-08-17 22:22:16 下午 [Thread: Thread-12][ Class:org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:984) ]
+INFO:Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@333d4a8c: startup date [Sat Aug 17 22:21:42 CST 2019]; root of context hierarchy
+2019-08-17 22:22:16 下午 [Thread: Thread-12][ Class:org.springframework.jmx.export.annotation.AnnotationMBeanExporter >> Method: org.springframework.jmx.export.MBeanExporter.destroy(MBeanExporter.java:449) ]
+INFO:Unregistering JMX-exposed beans on shutdown
