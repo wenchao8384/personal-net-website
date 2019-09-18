@@ -1,0 +1,107 @@
+server:
+  port: 9240
+  context-path: /
+  tomcat:
+    max-threads: 800
+    accept-count: 2000
+    min-spare-threads: 10
+
+spring:
+  application:
+    name: estest-local
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    riskCenterDate:
+      name: riskCenterDate
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://172.17.10.14:3306/ms_risk_center?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&failOverReadOnly=false
+      username: rw_gofun
+      password: TestMySQL2018
+      hikari:
+        poolName: hikariCP4GoFun
+        maximumPoolSize: 200
+        minimumIdle: 100
+        autoCommit: true
+        idleTimeout: 120000  #连接空闲时间2分钟
+        maxLifetime: 600000 #一个连接的存活时长ms 10分钟
+        connectionTimeout: 30000 #获取连接最大等待时长 30s
+  redis:
+    host: 172.17.10.14
+    port: 6379
+    password: TestRedis2018
+    timeout: 3000
+    database: 0
+    pool:
+      max-active: 200
+      max-idle: 20
+      min-idle: 5
+      max-wait: 1000
+  zipkin:
+    base-url: http://sleuth:8751
+  sleuth:
+    sampler:
+      percentage: 1 #zipkin采样率，默认为0.1，改为1后全采样
+  boot:
+    admin:
+      url: http://msadmin:8752
+
+feign:
+  compression:
+    request:
+      mime-types:
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 1024
+  hystrix:
+    enabled: false
+
+ribbon:
+  ReadTimeout: 10000 #请求处理的超时时间
+  ConnectTimeout: 2000  #请求连接的超时时间
+  MaxAutoRetriesNextServer: 2 #重试其他实例的最大次数，不包括第一次调用的实例
+  MaxAutoRetries: 1 #当前实例最大重试次数，不含第一次调用。
+  OkToRetryOnAllOperations: true  #对所有操作请求都进行重试
+
+management:
+  context-path: /manage
+  security:
+    roles:
+    - ADMIN
+    enabled: false #默认开始
+
+info:
+  app:
+    name: "@project.name@" #从pom.xml中获取
+    version: "@project.version@"
+
+eureka:
+  client:
+    healthcheck: true
+    serviceUrl:
+      defaultZone: http://online:Q7YKIpSDGKL7dEl4@eureka1.51gofunev.com:8753/eureka/,http://online:Q7YKIpSDGKL7dEl4@eureka2.51gofunev.com:8753/eureka/,http://online:Q7YKIpSDGKL7dEl4@eureka3.51gofunev.com:8753/eureka/
+
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    homePageUrlPath: /
+
+gofun:
+  mq:
+    namesrv-addr: 172.17.10.10:9876
+    group-name: group_gofun
+    topic-name: topic_risk_center #默认topic,producer.send可以指定非默认topic
+    batch-max-size: 1
+deployModel: cloud
+
+elastic:
+  aggregator:
+    url: 172.17.6.127:9200
+    name: elasticsearch
+    username:
+    password:
