@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="t1"></div>
+<div id="t2"></div>
+<div id="t3"></div>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jsencrypt.js"></script>
+    <script>
+        var message;
+        let encryptPwd ;
+         /*在页面上弹出提示对话框，将用户输入的结果赋给变量name*/
+         message=prompt("请问你要加密什么");
+         $("#t1").text(message);
+        let a = message;
+        generateEntype();
+        function generateEntype() {
+            let words = message;
+            let publicKey = "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALEyHBzL5Vun+Rpww3IgSv1fvn7qGXMRfiJUlT8Ose2dEAmh92LXsS9dAEnU4YAdrnfPn7BPd3s7LZw/y/XQJWUCAwEAAQ==";
+            let encrypt = new JSEncrypt();
+            encrypt.setPublicKey(publicKey);
+            encryptPwd = encrypt.encryptLong(words);
+            $("#t2").text(encryptPwd);
+        }
+        htmlobj=$.ajax({url:"http://localhost:8080/h5encode/rsadecode?encript="+encryptPwd,async:false});
+        $("#t3").text(htmlobj.responseText);   
+    </script>
+</body>
+</html>
