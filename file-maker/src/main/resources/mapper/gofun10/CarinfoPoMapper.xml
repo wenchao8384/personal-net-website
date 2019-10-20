@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gofun.mapper.gofun10.CarinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gofun.model.CarinfoPo" >
+    <result column="CarID" property="carid" jdbcType="VARCHAR" />
+    <result column="TerminalID" property="terminalid" jdbcType="VARCHAR" />
+    <result column="SIM" property="sim" jdbcType="VARCHAR" />
+    <result column="PlateNum" property="platenum" jdbcType="VARCHAR" />
+    <result column="CarTypeID" property="cartypeid" jdbcType="VARCHAR" />
+    <result column="EngineNo" property="engineno" jdbcType="VARCHAR" />
+    <result column="VIN" property="vin" jdbcType="VARCHAR" />
+    <result column="Color" property="color" jdbcType="VARCHAR" />
+    <result column="CityCode" property="citycode" jdbcType="VARCHAR" />
+    <result column="ParkingIDs" property="parkingids" jdbcType="VARCHAR" />
+    <result column="ToParkingIDs" property="toparkingids" jdbcType="VARCHAR" />
+    <result column="LicenseImg" property="licenseimg" jdbcType="VARCHAR" />
+    <result column="State" property="state" jdbcType="VARCHAR" />
+    <result column="SMS" property="sms" jdbcType="VARCHAR" />
+    <result column="ToParkingTime" property="toparkingtime" jdbcType="TIMESTAMP" />
+    <result column="IsDelete" property="isdelete" jdbcType="VARCHAR" />
+    <result column="stopAdmin" property="stopadmin" jdbcType="VARCHAR" />
+    <result column="stopTime" property="stoptime" jdbcType="TIMESTAMP" />
+    <result column="stopReason" property="stopreason" jdbcType="VARCHAR" />
+    <result column="termiType" property="termitype" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="idCardRig" property="idcardrig" jdbcType="INTEGER" />
+    <result column="trafficinsure" property="trafficinsure" jdbcType="INTEGER" />
+    <result column="businessinsure" property="businessinsure" jdbcType="INTEGER" />
+    <result column="IDCardAuthID" property="idcardauthid" jdbcType="VARCHAR" />
+    <result column="lastModifyDate" property="lastmodifydate" jdbcType="TIMESTAMP" />
+    <result column="substate" property="substate" jdbcType="VARCHAR" />
+    <result column="cartypeFeatureId" property="cartypefeatureid" jdbcType="VARCHAR" />
+    <result column="carinfoVersion" property="carinfoversion" jdbcType="INTEGER" />
+    <result column="dataSource" property="datasource" jdbcType="VARCHAR" />
+    <result column="shardKey" property="shardkey" jdbcType="INTEGER" />
+    <result column="tagText" property="tagtext" jdbcType="VARCHAR" />
+    <result column="TDR_SIM" property="tdrSim" jdbcType="VARCHAR" />
+    <result column="inUse" property="inuse" jdbcType="VARCHAR" />
+    <result column="cooperationType" property="cooperationtype" jdbcType="VARCHAR" />
+    <result column="firstOnlineTime" property="firstonlinetime" jdbcType="INTEGER" />
+    <result column="forceReturnFlag" property="forcereturnflag" jdbcType="INTEGER" />
+    <result column="forceReturnTime" property="forcereturntime" jdbcType="TIMESTAMP" />
+    <result column="removeforceReturnTime" property="removeforcereturntime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.gofun.model.CarinfoPo" >
+    insert into carinfo (CarID, TerminalID, SIM, 
+      PlateNum, CarTypeID, EngineNo, 
+      VIN, Color, CityCode, 
+      ParkingIDs, ToParkingIDs, LicenseImg, 
+      State, SMS, ToParkingTime, 
+      IsDelete, stopAdmin, stopTime, 
+      stopReason, termiType, createTime, 
+      idCardRig, trafficinsure, businessinsure, 
+      IDCardAuthID, lastModifyDate, substate, 
+      cartypeFeatureId, carinfoVersion, dataSource, 
+      shardKey, tagText, TDR_SIM, 
+      inUse, cooperationType, firstOnlineTime, 
+      forceReturnFlag, forceReturnTime, removeforceReturnTime
+      )
+    values (#{carid,jdbcType=VARCHAR}, #{terminalid,jdbcType=VARCHAR}, #{sim,jdbcType=VARCHAR}, 
+      #{platenum,jdbcType=VARCHAR}, #{cartypeid,jdbcType=VARCHAR}, #{engineno,jdbcType=VARCHAR}, 
+      #{vin,jdbcType=VARCHAR}, #{color,jdbcType=VARCHAR}, #{citycode,jdbcType=VARCHAR}, 
+      #{parkingids,jdbcType=VARCHAR}, #{toparkingids,jdbcType=VARCHAR}, #{licenseimg,jdbcType=VARCHAR}, 
+      #{state,jdbcType=VARCHAR}, #{sms,jdbcType=VARCHAR}, #{toparkingtime,jdbcType=TIMESTAMP}, 
+      #{isdelete,jdbcType=VARCHAR}, #{stopadmin,jdbcType=VARCHAR}, #{stoptime,jdbcType=TIMESTAMP}, 
+      #{stopreason,jdbcType=VARCHAR}, #{termitype,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{idcardrig,jdbcType=INTEGER}, #{trafficinsure,jdbcType=INTEGER}, #{businessinsure,jdbcType=INTEGER}, 
+      #{idcardauthid,jdbcType=VARCHAR}, #{lastmodifydate,jdbcType=TIMESTAMP}, #{substate,jdbcType=VARCHAR}, 
+      #{cartypefeatureid,jdbcType=VARCHAR}, #{carinfoversion,jdbcType=INTEGER}, #{datasource,jdbcType=VARCHAR}, 
+      #{shardkey,jdbcType=INTEGER}, #{tagtext,jdbcType=VARCHAR}, #{tdrSim,jdbcType=VARCHAR}, 
+      #{inuse,jdbcType=VARCHAR}, #{cooperationtype,jdbcType=VARCHAR}, #{firstonlinetime,jdbcType=INTEGER}, 
+      #{forcereturnflag,jdbcType=INTEGER}, #{forcereturntime,jdbcType=TIMESTAMP}, #{removeforcereturntime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CarID, TerminalID, SIM, PlateNum, CarTypeID, EngineNo, VIN, Color, CityCode, 
+    ParkingIDs, ToParkingIDs, LicenseImg, State, SMS, ToParkingTime, IsDelete, stopAdmin, 
+    stopTime, stopReason, termiType, createTime, idCardRig, trafficinsure, businessinsure, 
+    IDCardAuthID, lastModifyDate, substate, cartypeFeatureId, carinfoVersion, dataSource, 
+    shardKey, tagText, TDR_SIM, inUse, cooperationType, firstOnlineTime, forceReturnFlag, 
+    forceReturnTime, removeforceReturnTime
+    from carinfo where CarID = '000085c1-06dd-49f3-b9ca-33291f3a3250'
+  </select>
+</mapper>

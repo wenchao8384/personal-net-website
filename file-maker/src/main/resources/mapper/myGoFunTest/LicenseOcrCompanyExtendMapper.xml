@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gofun.mapper.myGoFunTest.LicenseOcrCompanyExtendMapper" >
+  <resultMap id="BaseResultMap" type="com.gofun.model.LicenseOcrCompanyExtend" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_ocr_info_id" property="userOcrInfoId" jdbcType="VARCHAR" />
+    <result column="license_id" property="licenseId" jdbcType="VARCHAR" />
+    <result column="license_name" property="licenseName" jdbcType="VARCHAR" />
+    <result column="license_sex" property="licenseSex" jdbcType="VARCHAR" />
+    <result column="license_nation" property="licenseNation" jdbcType="VARCHAR" />
+    <result column="license_addr" property="licenseAddr" jdbcType="VARCHAR" />
+    <result column="license_type" property="licenseType" jdbcType="VARCHAR" />
+    <result column="license_birthday" property="licenseBirthday" jdbcType="VARCHAR" />
+    <result column="license_issue_date" property="licenseIssueDate" jdbcType="VARCHAR" />
+    <result column="license_drive_type" property="licenseDriveType" jdbcType="VARCHAR" />
+    <result column="license_valid_period" property="licensValidPeriod" jdbcType="VARCHAR" />
+    <result column="license_valid_period_from" property="licenseValidPeriodFrom" jdbcType="VARCHAR" />
+    <result column="license_file_number" property="licenseFileNumber" jdbcType="VARCHAR" />
+    <result column="company_type" property="companyType" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from license_ocr_company_extend
+  </select>
+
+  <select id="selectById" resultMap="BaseResultMap" >
+    select *
+    from license_ocr_company_extend t where t.id = #{id,jdbcType=INTEGER}
+  </select>
+
+    <select id="selectByMainID" resultMap="BaseResultMap" >
+    select *
+    from license_ocr_company_extend t where t.user_ocr_info_id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <insert id="insert" parameterType="com.gofun.model.LicenseOcrCompanyExtend" >
+    insert into license_ocr_company_extend (
+      id,
+      user_ocr_info_id,
+      license_id,
+      license_name,
+      license_sex,
+      license_nation,
+      license_addr,
+      license_type,
+      license_birthday,
+      license_issue_date,
+      license_drive_type,
+      license_valid_period,
+      license_valid_period_from,
+      license_file_number,
+      company_type )
+    values (
+         #{id,jdbcType=INTEGER},
+         #{userOcrInfoId,jdbcType=INTEGER},
+         #{licenseId,jdbcType=VARCHAR},
+         #{licenseName,jdbcType=VARCHAR},
+         #{licenseSex,jdbcType=VARCHAR},
+         #{licenseNation,jdbcType=VARCHAR},
+         #{licenseAddr,jdbcType=VARCHAR},
+         #{licenseType,jdbcType=VARCHAR},
+         #{licenseBirthday,jdbcType=VARCHAR},
+         #{licenseIssueDate,jdbcType=VARCHAR},
+         #{licenseDriveType,jdbcType=VARCHAR},
+         #{licenseValidPeriod,jdbcType=VARCHAR},
+         #{licenseValidPeriodFrom,jdbcType=VARCHAR},
+         #{licenseFileNumber,jdbcType=VARCHAR},
+         #{companyType,jdbcType=VARCHAR}
+      )
+  </insert>
+</mapper>

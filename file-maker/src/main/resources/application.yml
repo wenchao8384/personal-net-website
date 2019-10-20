@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://106.12.79.160:3306/gofun_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&failOverReadOnly=false
+      username: root
+      password: 1qaz!QAZ
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.17.10.14:3306/electricvehicle?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&failOverReadOnly=false
+      username: rw_gofun
+      password: TestMySQL2018
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gofun.mapper.gofun10.ParkingSpaceMapper" >
+  <resultMap id="BaseResultMap" type="com.gofun.model.ParkingSpacePo" >
+    <result column="SpaceID" property="spaceid" jdbcType="BIGINT" />
+    <result column="ParkingID" property="parkingid" jdbcType="VARCHAR" />
+    <result column="CarID" property="carid" jdbcType="VARCHAR" />
+    <result column="PlateNum" property="platenum" jdbcType="VARCHAR" />
+    <result column="SpaceState" property="spacestate" jdbcType="VARCHAR" />
+    <result column="OrderID" property="orderid" jdbcType="VARCHAR" />
+    <result column="ToParkingTime" property="toparkingtime" jdbcType="TIMESTAMP" />
+    <result column="UseStatus" property="usestatus" jdbcType="VARCHAR" />
+    <result column="User" property="user" jdbcType="VARCHAR" />
+    <result column="Phone" property="phone" jdbcType="VARCHAR" />
+    <result column="ControlVerion" property="controlverion" jdbcType="VARCHAR" />
+    <result column="Resource" property="resource" jdbcType="VARCHAR" />
+    <result column="SpaceType" property="spacetype" jdbcType="VARCHAR" />
+    <result column="Remark" property="remark" jdbcType="VARCHAR" />
+    <result column="CreatedAt" property="createdat" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.gofun.model.ParkingSpacePo" >
+    insert into parking_space (SpaceID, ParkingID, CarID, 
+      PlateNum, SpaceState, OrderID, 
+      ToParkingTime, UseStatus, User, 
+      Phone, ControlVerion, Resource, 
+      SpaceType, Remark, CreatedAt
+      )
+    values (#{spaceid,jdbcType=BIGINT}, #{parkingid,jdbcType=VARCHAR}, #{carid,jdbcType=VARCHAR}, 
+      #{platenum,jdbcType=VARCHAR}, #{spacestate,jdbcType=VARCHAR}, #{orderid,jdbcType=VARCHAR}, 
+      #{toparkingtime,jdbcType=TIMESTAMP}, #{usestatus,jdbcType=VARCHAR}, #{user,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{controlverion,jdbcType=VARCHAR}, #{resource,jdbcType=VARCHAR}, 
+      #{spacetype,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{createdat,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SpaceID, ParkingID, CarID, PlateNum, SpaceState, OrderID, ToParkingTime, UseStatus, 
+    User, Phone, ControlVerion, Resource, SpaceType, Remark, CreatedAt
+    from parking_space
+  </select>
+  <select id="selectAllEmptyUse" resultMap="BaseResultMap" >
+    SELECT
+     SpaceID, ParkingID, CarID, PlateNum, SpaceState, OrderID, ToParkingTime, UseStatus,
+      User, Phone, ControlVerion, Resource, SpaceType, Remark, CreatedAt, count(p.PlateNum)
+    FROM
+     parking_space p where p.SpaceState!='EMPTY_USE'
+    GROUP BY
+     p.PlateNum
+    HAVING
+     count(p.PlateNum) > 1
+  </select>
+  <select id="selectAllEmptyUseByCarIdList" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT
+        c.ToParkingIDs,
+        s.ParkingID,
+        s.PlateNum,
+        s.SpaceID,
+        s.CarID,
+        s.SpaceState,
+        s.ToParkingTime
+    FROM
+        carinfo c,
+        parking_space s
+    WHERE
+        c.CarID = s.CarID
+        AND s.CarID IN
+      <foreach collection="carIds" index="index" item="item" open="(" separator="," close=")">
+        #{item}
+      </foreach>
+        AND s.SpaceState = 'IN_USE'
+    ORDER BY
+        s.PlateNum,
+        s.ToParkingTime
+  </select>
+    <select id="selectAllEmptyUseByCarId" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        c.ToParkingIDs,
+        s.ParkingID,
+        s.PlateNum,
+        s.SpaceID,
+        s.CarID,
+        s.SpaceState,
+        s.ToParkingTime
+        FROM
+        carinfo c,
+        parking_space s
+        WHERE
+        c.CarID = s.CarID
+        AND s.CarID = #{carId,jdbcType=VARCHAR}
+        AND s.SpaceState = 'IN_USE'
+        ORDER BY
+        s.PlateNum,
+        s.ToParkingTime
+        limit 1
+    </select>
+</mapper>

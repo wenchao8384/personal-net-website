@@ -1,0 +1,8 @@
+server:
+  port: 9091
+  context-path: /
+  tomcat:
+    uri-encoding: utf-8
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,text/javascript
